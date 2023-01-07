@@ -15,13 +15,16 @@ app.get('/', async(req,res)=>{
 });
 
 app.get('/restaurants', async(req,res)=>{
-    const restaurantRef = db.collection('restaurantsData');//.all();
-    const doc = await restaurantRef.get().all();
+    const restaurantRef = db.collection('restaurantsData');
+    const restaurants = [];
+    const restaurantDoc = await restaurantRef.get();
+    
+    restaurantDoc.forEach(doc => restaurants.push(doc.data()));
     // if (!doc.exists) {
     //     return res.sendStatus(400)
     // }
 
-    return res.status(200).json(doc);
+    return res.status(200).json(restaurants);
 });
 
 const port = process.env.PORT;
