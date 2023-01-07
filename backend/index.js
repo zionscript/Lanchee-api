@@ -15,7 +15,7 @@ app.get('/', async(req,res)=>{
 });
 
 app.get('/restaurants', async(req,res)=>{
-    const restaurantRef = db.collection('restaurantsData');
+    const restaurantRef = db.collection('restaurantsData').all();
     const doc = await restaurantRef.get();
     // if (!doc.exists) {
     //     return res.sendStatus(400)
