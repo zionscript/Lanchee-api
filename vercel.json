@@ -4,15 +4,15 @@
     },
     "builds": [
         {
-          "src": "server/index.js",
+          "src": "index.js",
           "use": "@vercel/node",
-          "config": { "includeFiles": ["server/**"] }
+          "config": { "includeFiles": ["index.js"] }
         }
       ],
       "routes": [
         {
-          "src": "/restaurants/(.*)",
-          "dest": "server/index.js"
+          "src": "/(.*)",
+          "dest": "index.js"
         }
     ]   
 }
