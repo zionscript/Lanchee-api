@@ -13,10 +13,6 @@
         {
           "src": "/restaurants/(.*)",
           "dest": "backend/index.js"
-        },
-        {
-            "src": "/(.*)",
-            "dest": "backend/index.js"
-          }
+        }
     ]   
 }
