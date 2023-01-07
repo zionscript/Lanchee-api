@@ -1,0 +1,18 @@
+{
+    "version": 2,
+    "env": {
+    },
+    "builds": [
+        {
+          "src": "server/index.js",
+          "use": "@vercel/node",
+          "config": { "includeFiles": ["server/**"] }
+        }
+      ],
+      "routes": [
+        {
+          "src": "/restaurants/(.*)",
+          "dest": "server/index.js"
+        }
+    ]   
+}
