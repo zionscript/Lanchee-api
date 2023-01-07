@@ -11,6 +11,10 @@ app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}))
 
 app.get('/', async(req,res)=>{
+    res.status(200).json({"msg":"veja o caminho /restaurants, por enquanto só aceitamos metodos GET"})
+});
+
+app.get('/restaurants', async(req,res)=>{
     const restaurantRef = db.collection('restaurantsData').doc('g2xiR2JyF4mGLOw3y4KC')
     const doc = await restaurantRef.get();
     // if (!doc.exists) {
