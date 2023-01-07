@@ -11,12 +11,12 @@
       ],
       "routes": [
         {
-          "src": "/(.*)",
+          "src": "/restaurants/(.*)",
           "dest": "backend/index.js"
         },
         {
             "src": "/(.*)",
-            "dest": "/restaurants"
+            "dest": "backend/index.js"
           }
     ]   
 }
