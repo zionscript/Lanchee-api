@@ -17,7 +17,7 @@ app.get('/', async(req,res)=>{
 });
 
 app.get('/restaurants', async(req,res)=>{
-    const restaurantRef = db.collection('restaurantsData');
+    const restaurantRef = db.collection('restaurantes');
     const restaurants = [];
     const restaurantDoc = await restaurantRef.get();
     
