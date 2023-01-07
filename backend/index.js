@@ -21,7 +21,7 @@ app.get('/restaurants', async(req,res)=>{
     //     return res.sendStatus(400)
     // }
 
-    return res.status(200).json(doc);
+    return res.status(200).json(doc.data());
 });
 
 const port = process.env.PORT;
