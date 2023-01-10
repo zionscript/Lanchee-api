@@ -7,7 +7,7 @@ dotenv.config();
 const app = express();
 
 app.use(cors({
-  exposedHeaders: ['Content-Range', 'X-Content-Range'],
+  exposedHeaders: ['Content-Range'],
 }));
 app.use(bodyParser.json());
 app.use(express.urlencoded({extended:true}))
